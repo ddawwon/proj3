@@ -1,0 +1,252 @@
+@charset "utf-8";
+
+/*googleips 웹폰트 css 파일 불러오기*/
+@import url('https://fonts.googleapis.com/css?family=Galada|Nanum+Gothic|Nanum+Myeongjo');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
+* {margin:0; padding:0;}
+html{font-size: 16px;}
+body{ font-size:16px;
+      color:#6f6f6f;
+      font-family: 'Nanum Gothic', sans-serif }
+ul, ol, li{list-style-type:none}
+img, fieldset{border:none;vertical-align: middle}
+hr {clear:both;border:none}
+a {color:inherit;text-decoration:none; outline: 0;}/*조상님 색 따라가*/
+table{border-collapse:collapse}
+input, textarea,
+input::placeholder, textarea::placeholder {color:inherit;font-size:inherit;
+       font-family:inherit;
+       vertical-align: middle;
+       outline: 0;}
+button{outline:0}/*선택할때 나오는 선을 안보이게 만듦*/
+
+.sound_only{display: block; text-indent: -999999999999px; height: 0px;}/*웹접근성 때문에, 글씨가 화면에 보이지 않도록*/
+.inner{max-width:1180px;margin:0 auto;}
+.wrap{width: 100%;min-width: 1200px;overflow: hidden;}
+
+h1{font-family: 'Do Hyeon',sans-serif;font-size: 2.375rem;color: #000;font-weight: lighter;}
+h2{font-family:'Stylish', sans-serif;color: #000;}
+h3{font-family: 'Jua', sans-serif;color: #000;}
+
+/****************메인화면, 서브화면 공통영역 ************************************/
+#header{background-color: #fff;height: 100px;}
+
+#nav_pop{position: fixed;width: 100%;min-width: 1024px;/*더이상 작아지지않도록*/
+      height: 100%;overflow: auto;
+      background-color: #fff;
+      z-index: 9999999999999999999;line-height: 30px; color: #000;display: none;
+      }
+    
+#nav_pop #nav_logo{float: left;
+      width: 100%;height: 100px;
+}
+#nav_pop #nav_logo img{width: 126px; height: 43px; margin-top:20px;margin-left: 95px;}
+
+dl.accordion1{
+	width:100%;
+}
+.accordion1 dt{
+	font-size:1.25rem;
+	color:#000;font-weight: bold;
+	background-repeat:no-repeat;
+	background-position:95% center;
+	background-color:#fff;
+	padding:8px 12px;
+      border-radius:3px;
+      margin-left: 50px;
+      cursor: pointer;
+}
+.accordion1 dt:hover{color: #4F5BA5;}
+.accordion1 dt >img{width: 15px;height: 15px;}
+.accordion1 dt.active{
+         background-color:#fff; transition: 1s;}
+
+.accordion1 dd{
+	font-size:0.937rem;	
+	color:#000;font-weight: bold;
+	background:#fff;
+	padding:10px 20px;
+      margin:0 0 2px;
+      margin-left: 50px;
+	/**2번 작업: dd 안보이게하기**/display: none;
+}
+
+
+
+dl.accordion2{
+	width:100%;
+}
+.accordion2 dt{
+	font-size:16px;
+	color:#000;
+	background-image:url(images/arrow_down.png);
+	background-repeat:no-repeat;
+	background-position:95% center;
+	background-color:#fff;
+	padding:8px 12px;
+      border-radius:3px;
+      margin-left: 30px;
+      cursor: pointer;
+}
+.accordion2 dt.active{background-image:url(images/arrow_up.png);
+         background-color:#fff; transition: 1s;}
+
+.accordion2 dd{
+	font-size:14px;	
+	color:#000;
+	background:#fff;
+	padding:10px 20px;
+      margin:0 0 2px;
+      margin-left: 30px;
+	/**2번 작업: dd 안보이게하기**/display: none;
+}
+
+
+
+
+/***.top_icon***/
+#header .top_icon{float: right;
+     height:75px;margin-right: 100px;
+   }
+#header .top_icon img{float: left; width: 24px; height: 25px; position: absolute;
+      padding-left: 20px; padding-right: 20px;padding-top: 24.5px;}
+#header .top_icon div{float: left; width: 64px; height: 74px;}
+
+/* 네비off 상태일 때 디자인 */
+#nav_pop_btn{display:block; width:30px;height:30px;position:absolute;
+      right:50px;top:28px;
+      display: inline-block;z-index:999999999999999999999999999999999999999999;
+      cursor: pointer;
+      /*******화면 1180px되면 나타남*******/
+      display: none;
+}
+
+#nav_pop_btn span{position:absolute;height:3px; width:35px;
+      background-color:#4F5BA5;transition:0.5s;
+}
+#nav_pop_btn span:first-child { top:0 }
+#nav_pop_btn span:nth-child(2) { top: 10px;width: 20px;left: 15px;}
+#nav_pop_btn span:last-child { top:20px}
+
+/* 네비on 상태일 때 디자인 */
+#nav_pop_btn.on span:first-child { top:13px; transform: rotate(405deg);background-color:#4F5BA5;}
+#nav_pop_btn.on span:nth-child(2) {width: 0;}
+#nav_pop_btn.on span:last-child { top:13px; transform: rotate(-405deg);background-color: #4F5BA5;}
+
+/***#logo***/
+#header #logo{float:left; }
+#header #logo img{width: 126px; height: 43px; margin-top:20px;margin-left: 95px;}
+
+
+/***#nav4***/
+#nav4{float: right;margin-right: 20px;}
+#nav4 .depth1 > li .sub_check{color: #C7382F;font-weight: 1.3rem;}
+.sub_check{color: #C7382F;font-weight: 1.3rem;}
+
+#nav4 .depth1{position: static;height: 100px;}   
+#nav4 .depth1 > li {float:left;padding:0 30px;display: block;}
+#nav4 .depth1 > li > a {display: block;position: relative;
+                        text-align: center;font-size:1rem;color:#000;
+                        font-weight: bold;line-height:95px;}
+#nav4 .depth1 > li > a:after {content: '';height:5px; background-color:#fff;
+                         position: absolute;width:0;display: block;
+                         transition: 0.5s;}
+#nav4 .depth1 > li:hover > a:after{width:100%}
+
+
+#nav4 .nav_box {position:absolute;/*top:calc(2.8rem + 25px);*/top:100px;left:0;width:100%;height: 150px;
+               background-color:#fff;z-index:9999999999;
+               display: none;
+               padding:10px 0; color: #000;}
+#nav4 .depth1>li:hover .nav_box{display: block;} 
+
+#nav4 .nav_box .depth2{widows: 100%;;margin:0 auto;position: relative; 
+                         /* text-align: center; */
+                         padding-left: 100px; box-sizing: border-box;}
+#nav4 .nav_box .depth2:after{content: '';display: block;clear: both;}
+#nav4 .depth2 > li{ box-sizing: border-box;
+                  padding:10px;padding-left: calc(50% - 400px);padding-top: 20px;}
+
+#nav4 .depth2 >li::before{content:'';display: inline-block; width: 5px; height: 5px; 
+                         background-color: #000; border-radius: 50%;
+                         margin-right: 20px; transform: translate(0,-3px);}
+#nav4 .depth2 >li:last-child::after{display: none;}
+#nav4 .depth2 a:hover{font-weight: bold;color: teal;}
+
+
+#nav4 .nav_box img{
+      width: 200px;height: 200px;float: right;
+      top: 0px;right: 35%;margin-top: 34px; position: absolute;
+      border-radius: 40px;cursor: pointer;
+      transition: all ease 0.8s;
+}
+#nav4 .nav_box img:hover{transform: scale(1.1);}
+
+
+/*********************footer****************************/
+/*********************footer****************************/
+#footer{height: 350px;background-color: #F4F4F4;}
+#footer .inner{height: 143px;}
+
+.footer_logo{float: left;margin-right: 120px;margin-top: 150px;margin-left: 20px;}
+.footer_logo img{width: 94px;height: 32px;}
+
+.footer_txt{float: left;margin-top: 150px;}
+.footer_menu{margin-bottom: 20px;}
+.footer_menu li{display: inline-block;margin-right: 20px;
+	color: #000;
+	transition: 0.5s;
+}
+.footer_menu li:hover{color: #00CCBD;}
+.footer_add{color: #000;line-height: 25px;}
+
+.footer_sns{float: right;margin-top: 150px;}
+.footer_sns img{width: 40px;height: 40px;margin-right: 20px;}
+
+
+
+/*********************모바일 버전 max-width:1180px****************************/
+@media all and (max-width:1180px){
+#footer {
+      height: 300px;
+      /* background-color: #F4F4F4; */
+  }
+  .footer_logo {
+      /* float: left;
+      margin-right: 120px;
+      margin-top: 150px;
+        margin-left: 20px; */
+        display: none;
+  }
+  .footer_txt {
+      /* float: left;
+         */
+         margin-top: 0px;
+  }
+  .footer_menu {
+        /* margin-bottom: 20px; */
+        width: 100%;
+        float: left;
+        border-top: 1px solid #4d4d4d;
+        border-bottom: 1px solid #4d4d4d;
+        top: 0px;
+        padding: 25px;
+  }
+  .footer_add {
+      /* color: #000;
+        line-height: 25px; */
+        float: left;
+        margin-top: 30px;
+        padding: 25px;
+  }
+  .footer_sns {
+      float: right;
+        margin-top: -80px;
+        padding: 25px;
+  }
+
+  }/**max-width:1180px**/

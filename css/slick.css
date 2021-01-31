@@ -1,0 +1,197 @@
+/* Slider */
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+/***********HDW************/
+
+/*#sec1 .slick*/
+#sec1{clear:both}
+#sec1 .slick-slide img{width: 100%; min-width: 1024px;} /*반응형 최소이미지 잡아주기*/
+/*버튼*/
+#sec1 .slick-arrow{position:absolute;top:75%;z-index:999999;width: 100px; height: 50px;
+border: none;
+background-color: transparent;
+cursor: pointer;
+
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+text-indent: -999999999999px;}
+#sec1 .slick-prev{left:100px;background-image: url(../images/mainslider_l.png);}
+#sec1 .slick-next{right:100px;background-image: url(../images/mainslider_r.png);}
+
+/*페이지 점*/
+#sec1 .slick-dots{position:absolute;right:50%;bottom:20px;}
+#sec1 .slick-dots li{display: inline-block;margin-left: 10px;margin-right: 10px;}
+#sec1 .slick-dots li button{text-indent:-99999999px}
+/*페이지 점 색상표시*/
+#sec1 .slick-dots li.slick-active button{background-color:teal; border: 1px solid#fff;
+                                   width: 10px;height: 10px;
+                                   border-radius: 40px;cursor: pointer;}
+
+#sec1 #slick-slide-control00{width: 10px;height: 10px;border-radius: 40px;border: none;cursor: pointer;}
+#sec1 #slick-slide-control01{width: 10px;height: 10px;border-radius: 40px;border: none;cursor: pointer;}
+#sec1 #slick-slide-control02{width: 10px;height: 10px;border-radius: 40px;border: none;cursor: pointer;}
+
+/*#sec2 .slick*/
+/*페이지 점*/
+.sec2_imgbox .slick-dots{position:absolute;left:20%;bottom:-35px;}
+.sec2_imgbox .slick-dots li{display: inline-block;margin-left: 10px;margin-right: 10px;width: 20px;height: 10px;border-radius: 40px;border: none;}
+.sec2_imgbox .slick-dots li button{text-indent:-99999px}
+/*페이지 점 색상표시*/
+.sec2_imgbox .slick-active button{background-color:teal; border: 5px solid#fff;
+                                   width: 30px;height: 10px;
+                                   border-radius: 50px;cursor: pointer;}
+.sec2_imgbox #slick-slide-control10{width: 20px;height: 10px;border-radius: 40px;border: none;cursor: pointer;}
+.sec2_imgbox #slick-slide-control11{width: 20px;height: 10px;border-radius: 40px;border: none;cursor: pointer;}
+.sec2_imgbox #slick-slide-control12{width: 20px;height: 10px;border-radius: 40px;border: none;cursor: pointer;}
+.sec2_imgbox #slick-slide-control13{width: 20px;height: 10px;border-radius: 40px;border: none;cursor: pointer;}
+
+/*#sec4 .slick*/
+/*페이지 점*/
+#sec4 .slick-dots{position:absolute;left:calc((100% - 154px) / 2);bottom:-50px;}
+#sec4 .slick-dots li{display: inline-block;margin-left: 10px;margin-right: 10px;width: 20px;height: 10px;border-radius: 40px;border: none;}
+#sec4 .slick-dots li button{text-indent:-99999px}
+/*페이지 점 색상표시*/
+.slick-active button{background-color:teal; border: 5px solid#fff;
+                                   width: 30px;height: 10px;
+                                   border-radius: 50px;cursor: pointer;}
+#slick-slide-control20{width: 20px;height: 10px;border-radius: 40px;border: none;cursor: pointer;}
+#slick-slide-control21{width: 20px;height: 10px;border-radius: 40px;border: none;cursor: pointer;}
+#slick-slide-control22{width: 20px;height: 10px;border-radius: 40px;border: none;cursor: pointer;}
+
+/*********************모바일 버전 max-width:1180px****************************/
+@media all and (max-width:1180px){
+    #sec1 .slick-dots{
+        /* position:absolute;bottom:20px; */
+        right:calc((100% - 90px)/2);
+    }
+    .sec2_imgbox .slick-dots{
+        position: absolute;
+        left: calc((100% - 160px)/2);
+        bottom: -30px;
+    }
+
+}/**max-width:1180px**/
+
+
+/*********************모바일 버전 max-width:1180px****************************/
+@media all and (max-width:768px){
+
+}/**max-width:1180px**/

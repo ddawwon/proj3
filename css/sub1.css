@@ -1,0 +1,82 @@
+
+
+/*********************section1****************************/
+#sec1{
+    margin-top: 90px;
+}
+#sec1 .tit_imgbox{
+    border-bottom: 1px solid #f4f4ff;
+    margin-bottom: 80px;
+}
+#sec1 .tit_imgbox h1{
+    position: absolute;
+    text-align: center;
+    width: 200px;
+    left: calc((100% - 200px)/2);
+}
+#sec1 .cont1{
+    text-align: center;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+#sec1 .cont1 img:first-child{
+    border: 2px solid #8CC9C8;
+}
+#sec1 .cont1 img{
+    width: 560px;height: 200px;
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.8s;
+}
+#sec1 .cont1 img:hover{
+    transform: scale(1.1);
+    border: 1px solid #f4f4f4;
+}
+#sec1 .cont2{
+    text-align: center;
+    overflow: hidden;
+}
+#sec1 .cont2 img{
+    width: 560px;height: 200px;
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.8s;
+}
+#sec1 .cont2 img:hover{
+    transform: scale(1.1);
+    border: 1px solid #f4f4f4;
+}
+
+
+
+/*********************section6****************************/
+#sec6{width: 100%;position: relative;margin-top: 300px;}
+#sec6 .sec6_txtbox{text-align: center;margin-bottom: 40px;}
+#sec6 .sec6_txtbox h1{font-size: 2rem;color: #00CCBD;}
+
+#sec6 .roundbox{position: absolute;
+	left: calc((100% - 630px)/2);
+	margin-top: -180px;
+}
+
+
+#sec6 .sec6_box1 img{width: 300px;height: 300px;border-radius: 100%;background-color: #fff;
+	margin-right: 10px;margin-left: 10px;
+}
+#sec6 .txtbox1{position: absolute;text-align: center;left:14%;margin-top: 80px;}
+#sec6 .txtbox1 p{margin-bottom: 20px;font-size: 1.25;color: #000;}
+#sec6 .txtbox1 button{width: 96px;height: 34px;border: 1px solid #000;cursor: pointer;
+	border-radius: 50px;background-color:  transparent; margin-top: 10px;cursor: pointer;}
+#sec6 .txtbox1 button:hover{background-color:  #8CC9C8;color: #fff;border: none;}
+
+#sec6 .sec6_box2 img{width: 300px;height: 300px;border-radius: 100%;background-color: #8CC9C8;
+	margin-right: 10px; margin-left: 10px;
+}
+#sec6 .txtbox2{position: absolute;text-align: center;left:64%;margin-top: 80px;}
+#sec6 .txtbox2 p{margin-bottom: 20px;font-size: 1.25;color: #000;}
+#sec6 .txtbox2 button{width: 96px;height: 34px;border: 1px solid #000;cursor: pointer;
+	border-radius: 50px;background-color:  transparent;margin-top: 10px;}
+#sec6 .txtbox2 button:hover{background-color:  #fff;color: #000;border: none;}
+
+#sec6 .sec6_back{margin-top: 250px;}
+#sec6 .sec6_back img{width: 100%;height: 293px;}
