@@ -414,6 +414,10 @@
 		height: 35px;
 		margin-right: 5px;
 	}
+	#footer {
+		height: 350px;
+		/* background-color: #F4F4F4; */
+	}
 
 }/**max-width:768px**/
 
