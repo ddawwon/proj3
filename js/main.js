@@ -94,4 +94,20 @@ $('#nav_pop_btn').click(function(){
         })
         })
 
+        //quick_btn
+    //퀵메뉴 안보였다, 나타났다, 안보였다
+    $(window).scroll(function(){
+        if($(document).scrollTop() >= 500 && $(document).scrollTop()  <= $('#footer').offset().top - 700) {
+           $('.quick_menu').fadeIn(200);
+       }else { $('.quick_menu').fadeOut(200);}
+    })
+
+    //퀵메뉴 탑버튼- 맨위로 올라감
+    $('.quick_menu').click(function(){
+        $('html, body').animate({
+            scrollTop :0
+        }, 550);
+        return false;
+    });
+
 })//jq end

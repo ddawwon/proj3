@@ -29,7 +29,7 @@ $(function(){
                  }
             }, {  breakpoint: 768,
                  settings: {
-                   slidesToShow: 2,
+                   slidesToShow: 1,
                    slidesToScroll: 1
                  }
             }
@@ -52,7 +52,7 @@ $(function(){
                    speed : 1500,
                    pauseOnHover : true,
                  }
-            }, {  breakpoint: 768,
+            }, {  breakpoint: 1160,
                  settings: {
                    slidesToShow: 1,
                    slidesToScroll: 1
